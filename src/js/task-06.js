@@ -11,13 +11,11 @@ function changeBorderColor(event) {
   if (currentLength === targetLength) {
     event.currentTarget.classList.add('valid');
     event.currentTarget.classList.remove('invalid');
-  }
-  if (currentLength !== targetLength) {
-    event.currentTarget.classList.add('invalid');
-    event.currentTarget.classList.remove('valid');
-  }
-  if (currentLength === 0) {
+  } else if (currentLength === 0) {
     event.currentTarget.classList.remove('invalid');
+    event.currentTarget.classList.remove('valid');
+  } else {
+    event.currentTarget.classList.add('invalid');
     event.currentTarget.classList.remove('valid');
   }
 }
